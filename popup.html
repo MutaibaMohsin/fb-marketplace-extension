@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Marketplace Negotiator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Marketplace Negotiator</h1>
+    <form id="searchForm">
+      <label for="product">Product Name:</label>
+      <input type="text" id="product" placeholder="e.g., bag" required>
+      
+      <label for="minPrice">Min Price:</label>
+      <input type="number" id="minPrice" required>
+      
+      <label for="maxPrice">Max Price:</label>
+      <input type="number" id="maxPrice" required>
+      
+      <button type="submit">Search Marketplace</button>
+    </form>
+    
+    <div id="results">
+      <!-- Top 10 products will be listed here -->
+    </div>
+    
+    <div id="negotiation">
+      <!-- Negotiation conversation will be displayed here -->
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

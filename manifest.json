@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Marketplace Negotiator",
+    "version": "1.0",
+    "description": "Scrapes Facebook Marketplace and negotiates prices using AI.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage",
+        "notifications"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.jpg",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.facebook.com/marketplace/*"
+            ],
+            "js": [
+                "content_script.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "*://*.facebook.com/*"
+    ]
+}
